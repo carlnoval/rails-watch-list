@@ -1,2 +1,9 @@
-<h1>Lists#show</h1>
-<p>Find me in app/views/lists/show.html.erb</p>
+<h1>Show page for: <%= @list.name %></h1>
+
+<h2>Bookmarked Movies</h2>
+<ul>
+  <% @list.movies.each do |movie| %>
+  <li> <%= link_to  "movie.title", path %>
+  </li>
+  <% end %>
+</ul>

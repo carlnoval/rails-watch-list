@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   # A user can create a new list                              GET "lists/new"
   #                                                           POST "lists"
 
+  root to: "lists#index"
   # this command also creates the erb files 
   # rails g controller lists index show new creates: empty method actions, erb files
   resources :lists, only: [ :index, :show, :new, :create ]

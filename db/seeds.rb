@@ -16,7 +16,9 @@ end
 puts "Creating lists completed..."
 puts "Creating bookmarks..."
 Bookmark.create!(comment: "Comment1", movie_id: Movie.first.id, list_id: List.first.id)
-Bookmark.create!(comment: "Comment1", movie_id: Movie.last.id, list_id: List.last.id)
+Bookmark.create!(comment: "Comment2", movie_id: (Movie.first.id + 1), list_id: List.first.id)
+Bookmark.create!(comment: "Comment3", movie_id: (Movie.first.id + 2), list_id: List.first.id + 1)
+Bookmark.create!(comment: "Comment4", movie_id: (Movie.first.id + 3), list_id: List.first.id + 1)
 puts "Creating bookmarks completed..."
 puts "ID List"
 puts "Movie: count/min/max/ #{Movie.count} #{Movie.first.id}, #{Movie.last.id}"
