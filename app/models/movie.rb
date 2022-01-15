@@ -1,3 +1,4 @@
+# rails g model movie title overview poster_url rating:decimal
 class Movie < ApplicationRecord
   # A movie has many bookmarks
   # You can’t delete a movie if it is referenced in at least one bookmark.
