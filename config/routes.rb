@@ -10,5 +10,11 @@ Rails.application.routes.draw do
   root to: "lists#index"
   # this command also creates the erb files 
   # rails g controller lists index show new creates: empty method actions, erb files
-  resources :lists, only: [ :index, :show, :new, :create ]
+  resources :lists, only: [ :index, :show, :new, :create ] do
+    # GET "lists/42/bookmarks/new"
+    # POST "lists/42/bookmarks"
+    resources :bookmarks, only: [ :new, :create ]
+  end
+
+  resources :bookmarks, only: [ :destroy ]
 end

@@ -4,6 +4,8 @@ class Movie < ApplicationRecord
   # You can’t delete a movie if it is referenced in at least one bookmark.
   has_many :bookmarks
 
+  has_many :list, through: :bookmarks
+
   # A movie must have a unique title and an overview.
   # validates :title, :overview, presence: true, uniqueness: true
   validates :title, uniqueness: true  

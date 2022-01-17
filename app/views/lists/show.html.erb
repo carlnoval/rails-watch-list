@@ -1,9 +1,15 @@
 <h1>Show page for: <%= @list.name %></h1>
 
 <h2>Bookmarked Movies</h2>
+<%= link_to  "Add a bookmark", new_list_bookmark_path(@list) %>
 <ul>
-  <% @list.movies.each do |movie| %>
-  <li> <%= link_to  "movie.title", path %>
+  <% @list.bookmarks.each do |bookmark| %>
+  <li class="d-flex">
+    <h3><%= bookmark.movie.title %></h3>
+    <p><%= bookmark.comment %></p>
+    <%= link_to bookmark_path(bookmark), method: :delete do %>
+      <i class="far fa-trash-alt"></i>
+    <% end %>
   </li>
   <% end %>
 </ul>

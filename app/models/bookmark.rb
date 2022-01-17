@@ -17,16 +17,3 @@ class Bookmark < ApplicationRecord
   # The comment of a bookmark cannot be shorter than 6 characters.  
   validates :comment, length: { minimum: 6 }  # or: validates_length_of :comment, minimum: 6
 end
-
-
-# schema
-
-# create_table "bookmarks", force: :cascade do |t|
-#   t.string "comment"
-#   t.bigint "movie_id", null: false
-#   t.bigint "list_id", null: false
-#   t.datetime "created_at", precision: 6, null: false
-#   t.datetime "updated_at", precision: 6, null: false
-#   t.index ["list_id"], name: "index_bookmarks_on_list_id"
-#   t.index ["movie_id"], name: "index_bookmarks_on_movie_id"
-# end
