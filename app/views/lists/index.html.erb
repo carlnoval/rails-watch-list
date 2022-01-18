@@ -7,10 +7,12 @@
 </ul>
 
 <!-- app/views/lists/index.html.erb -->
+<%# qoyqrrrjlou3o0fn0kfk is the image id from cloudinary %>
 <%= cl_image_tag("qoyqrrrjlou3o0fn0kfk",
       width: 400, height: 300, crop: :fill) %>
 
 <!-- for face detection -->
+<%# e4reomlirtcvmoabpl7j is the image id from cloudinary %>
 <%# crop modes: scale, fit, fill, limit, pad, crop %>
 <%= cl_image_tag("e4reomlirtcvmoabpl7j",
       width: 150, height: 150, crop: :thumb, gravity: :face) %>
