@@ -33,6 +33,8 @@ gem 'autoprefixer-rails', '10.2.5'
 gem 'font-awesome-sass', '~> 5.15'
 gem 'simple_form'
 gem 'faker'
+# to be able to setup sensitive environment details like apis, keys, and other credentials, etc
+gem 'dotenv-rails', groups: [:development, :test]
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
