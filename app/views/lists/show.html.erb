@@ -11,8 +11,9 @@
   <% @list.bookmarks.each do |bookmark| %>
   <li class="d-flex">
     <h3><%= bookmark.movie.title %></h3>
-    <%= (cl_image_tag bookmark.photo.key, height: 300, width: 400, crop: :fill) if bookmark.photo.attached? %>
+    
     <p><%= bookmark.comment %></p>
+    <%= (cl_image_tag bookmark.photo.key, height: 300, width: 400, crop: :fill) if bookmark.photo.attached? %>
     <%= link_to bookmark_path(bookmark), method: :delete do %>
       <i class="far fa-trash-alt"></i>
     <% end %>
