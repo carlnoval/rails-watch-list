@@ -3,6 +3,7 @@ class Bookmark < ApplicationRecord
   # A bookmark belongs to a list
   belongs_to :movie
   belongs_to :list
+  has_one_attached :photo
 
   # A bookmark must be linked to a movie and a list, and the [movie, list] pairings should be unique.
   # validates_uniqueness_of :comment, scope: [:movie_id, :list_id]

@@ -35,6 +35,8 @@ gem 'simple_form'
 gem 'faker'
 # to be able to setup sensitive environment details like apis, keys, and other credentials, etc
 gem 'dotenv-rails', groups: [:development, :test]
+# image hosting
+gem 'cloudinary', '~> 1.16.0'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

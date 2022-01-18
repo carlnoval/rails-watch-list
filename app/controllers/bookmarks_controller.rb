@@ -28,6 +28,6 @@ class BookmarksController < ApplicationController
   private
 
   def strong_params 
-    params.require(:bookmark).permit(:movie_id, :comment)
+    params.require(:bookmark).permit(:movie_id, :comment, :photo)
   end
 end
