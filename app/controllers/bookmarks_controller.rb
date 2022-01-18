@@ -7,10 +7,12 @@ class BookmarksController < ApplicationController
   def create
     # no need for strong params cause the entire params is not being passed
     @bookmark = Bookmark.new(strong_params)
-    list = List.find(params[:list_id])
-    @bookmark.list = list
+    # @ is still needed, in case creation fails...
+    # the form in bookmarks/new.html.erb will still be able to access @list instance variable
+    @list = List.find(params[:list_id])
+    @bookmark.list = @list
     if @bookmark.save
-      redirect_to list_path(list)
+      redirect_to list_path(@list)
     else
       render :new
     end

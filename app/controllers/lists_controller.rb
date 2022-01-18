@@ -5,6 +5,7 @@ class ListsController < ApplicationController
 
   def show
     @list = List.find(params[:id])
+    @can_add_comment = @list.movies.count == Movie.count
   end
 
   def new
