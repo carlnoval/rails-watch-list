@@ -5,7 +5,7 @@
 </h1>
 <%= simple_form_for [ @list, @bookmark ] do |f| %>
   <%= f.association :movie %>
-  <%= f.input :photo, as: :file %>
+  <%= f.input :poster_img, label: "Movie poster", as: :file %>
   <%= f.input :comment %>
   <%= f.submit %>
 <% end %>

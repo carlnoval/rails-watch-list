@@ -9,11 +9,11 @@
 
 <ul>
   <% @list.bookmarks.each do |bookmark| %>
-  <li class="d-flex">
+  <li class="d-flex justify-content-around">
     <h3><%= bookmark.movie.title %></h3>
     
     <p><%= bookmark.comment %></p>
-    <%= (cl_image_tag bookmark.photo.key, height: 300, width: 400, crop: :fill) if bookmark.photo.attached? %>
+    <%= (cl_image_tag bookmark.poster_img.key,  width: 150, height: 150, crop: :thumb, radius: 16, border: {width: 4, color: "red"}) if bookmark.poster_img.attached? %>
     <%= link_to bookmark_path(bookmark), method: :delete do %>
       <i class="far fa-trash-alt"></i>
     <% end %>

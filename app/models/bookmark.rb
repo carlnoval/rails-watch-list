@@ -5,7 +5,7 @@ class Bookmark < ApplicationRecord
   belongs_to :list
 
   # allow usage of active storage attachments
-  has_one_attached :photo
+  has_one_attached :poster_img, dependent: :destroy
 
   # A bookmark must be linked to a movie and a list, and the [movie, list] pairings should be unique.
   # validates_uniqueness_of :comment, scope: [:movie_id, :list_id]
