@@ -4,7 +4,7 @@
 <% if @can_add_comment %>
   <p>All movies have been commented in this list.</p>
 <% else %>
-  <%= link_to  "Add a bookmark", new_list_bookmark_path(@list) %>
+  <%= link_to  "Add a <del>bookmark</del> movie".html_safe, new_list_bookmark_path(@list) %>
 <% end %>
 
 <ul>
