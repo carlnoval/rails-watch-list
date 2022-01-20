@@ -2,7 +2,7 @@
 <html>
   <head>
     <title>RailsWatchList</title>
-    <%# to enable Bootstrap responsiveness %>
+    <%# manually added to enable Bootstrap responsiveness %>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
@@ -10,12 +10,13 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
+    <%# loads the stylesheet from app/assets/stylesheets %>
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
-    <%= render 'layouts/navbar' %>
+    <%= render 'shared/navbar' %>
     <%= yield %>
   </body>
 </html>
