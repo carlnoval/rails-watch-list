@@ -13,3 +13,8 @@ a {
   text-decoration: none !important;
   display: inline-block;
 }
+
+li {
+  // remove dots
+  list-style-type: none;
+}

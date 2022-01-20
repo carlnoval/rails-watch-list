@@ -1,0 +1,27 @@
+.movie-list-container{
+  // width: 560px;
+  // margin-left: auto;
+  // margin-right: auto;
+  background-color: #A8DADC;
+  border-radius: 1rem;
+  border: 4px dashed #E63946;
+  color: #1D3557;
+
+  #list-header {
+    padding: 1rem;
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  .list-item-container {
+    padding: 1rem;
+    gap: 1rem;
+    .list-item {
+      font-size: 1rem;
+      padding: 1rem;
+      color: #457B9D !important;
+      background-color: pink;
+    }
+  }
+}
