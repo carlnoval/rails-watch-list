@@ -1,0 +1,14 @@
+.my-navbar-container {
+  padding: 0 2rem;
+  height: 6rem;
+}
+
+#btn-fonts {
+  color: $default_font_color;
+  font-size: 3rem;
+  transition: 200ms;
+
+  &:hover {
+    color: #A8DADC;
+  }
+}
